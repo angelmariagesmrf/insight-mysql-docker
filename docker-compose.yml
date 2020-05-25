@@ -12,4 +12,4 @@ services:
             - ${HOME}/Gutenberg/MarfeelAnubis/src/main/resources:/schemas
         environment:
             MYSQL_ROOT_HOST: "%"
-            MYSQL_ROOT_PASSWORD: my_password
+            MYSQL_ROOT_PASSWORD: my-secret-pw
