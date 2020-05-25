@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+    insight-mysql:
+        container_name: insight_mysql
+        image: mysql:5.7
+        restart: always
+        ports:
+            - "3306:3306"
+        volumes:
+            - ${HOME}/insight-mysql-docker/data:/var/lib/mysql
+            - ${HOME}/Gutenberg/MarfeelAnubis/src/main/resources:/schemas
+        environment:
+            MYSQL_ROOT_HOST: "%"
+            MYSQL_ROOT_PASSWORD: my_password

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker exec -it insight_mysql /usr/bin/mysql --password=my_password
