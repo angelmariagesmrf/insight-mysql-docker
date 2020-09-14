@@ -8,8 +8,8 @@ services:
         ports:
             - "3306:3306"
         volumes:
-            - ${HOME}/insight-mysql-docker/data:/var/lib/mysql
-            - ${HOME}/Gutenberg/MarfeelAnubis/src/main/resources:/schemas
+            - ${MRF_HOME}/insight-mysql-docker/data:/var/lib/mysql
+            - ${MRF_HOME}/Gutenberg/MarfeelAnubis/src/main/resources:/schemas
         environment:
-            MYSQL_ROOT_HOST: "%"
-            MYSQL_ROOT_PASSWORD: my-secret-pw
+            - MYSQL_ROOT_HOST="%"
+            - MYSQL_ROOT_PASSWORD=my-secret-pw
